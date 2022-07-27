@@ -41,9 +41,9 @@ jobs:
         REGISTRY: ghcr.io
         PROJECT_ID: jasper-d
         COSIGN_EXPERIMENTAL: 1
-        run: |
-          echo $GHCR_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
-          docker logout ghcr.io
-          echo "$COSIGN_EXPERIMENTAL"
-    #     ./dotnet.publish.sh
+      run: |
+        echo $GHCR_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
+        docker logout ghcr.io
+        echo "$COSIGN_EXPERIMENTAL"
+  #     ./dotnet.publish.sh
     
