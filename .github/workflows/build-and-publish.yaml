@@ -17,6 +17,18 @@ jobs:
     - name: Install cosign
       uses: sigstore/cosign-installer@09a077b27eb1310dcfb21981bee195b30ce09de0
 
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
+      with:
+        platforms: arm64
+      
+    - name: Set up Docker Buildx
+      id: buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Docker platforms
+      run: echo ${{ steps.buildx.outputs.platforms }}
+
     - name: Install Prerequisites
       run: |
         curl https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh -sSL \
