@@ -26,5 +26,4 @@ bazel test \
   --curses=no \
   --test_output=errors \
   --test_timeout=900 \
-  --jobs=6 \
   $(bazel query 'attr("tags", "arm64", "//experimental/dotnet/...")')
