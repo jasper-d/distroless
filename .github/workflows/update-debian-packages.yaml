@@ -1,4 +1,4 @@
-name: Build and Publish
+name: Update Debian Packages
 
 on:
   workflow_dispatch:

@@ -1,4 +1,4 @@
-name: Build and Publish
+name: PR Analysis
 
 on:
   workflow_dispatch:
