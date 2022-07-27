@@ -22,6 +22,8 @@ jobs:
         env
         which dotnet
         ls -lah /usr/share/dotnet
+        dotnet --info
+        ls -lah ./
 
     - name: Install Prerequisites
       run: |
